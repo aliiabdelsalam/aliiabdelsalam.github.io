@@ -26,13 +26,13 @@ For example, a site like this one we use to collect information about Target htt
 
 Here's another, better site: https://whois.domaintools.com/
 
-![image.png](attachment:4b05bfec-00e8-42ea-98ac-4fd28358ecd9:image.png)
+![alt text](/aliiabdelsalam.github.io/assets/Images/1.png)
 
 As you can see, there's a lot of great information on this site. 
 
 There is also a tool on Kali Linux called `Whois` that you can use as a Command Line 
 
-![image.png](attachment:1032570d-744f-4ca5-9a92-9bb0c6b31526:image.png)
+![alt text](/aliiabdelsalam.github.io/assets/Images/2.png)
 
 As you can see, we can gather information using this tool. 
 
@@ -80,9 +80,9 @@ These names can give us an idea of the company's internal structure.
 
 This topic is very useful in the **reconnaissance** or information gathering phase during a penetration test, and we can use sites like https://crt.sh/ or https://search.censys.io/to easily find these domains.
 
-![image.png](attachment:f7e29eaa-f30f-4e07-ac6e-e5dec5d75d0c:image.png)
+![alt text](/aliiabdelsalam.github.io/assets/Images/3.png)
 
-![image.png](attachment:3618f79d-cac7-4577-a043-d7268a867212:image.png)
+![alt text](/aliiabdelsalam.github.io/assets/Images/4.png)
 
 It is also useful in the Web Application Penetration Testing (WAPT) process by leaving a subdomain, for example, unprotected and so on because subdomains can be less secure 
 
@@ -140,7 +140,7 @@ It works with tools like `nslookup or` `dig`
 
 This is an example of using the `dig` tool.
 
-![image.png](attachment:aa2f8841-540a-438a-8741-6fc6284a9c98:image.png)
+![alt text](/aliiabdelsalam.github.io/assets/Images/5.png)
 
 How do we prevent this? By preventing you from getting a Zone Transfer in the first place, which is done by the Adminstrator 
 
@@ -187,7 +187,7 @@ Invoke-DomainHarvestOWA–ExchHostname mail.domain.com –OutFile potential_doma
 
 ```
 
-![image.png](attachment:2687d7cc-8bcf-4bb5-bf13-a7f2a9616c8f:image.png)
+![alt text](/aliiabdelsalam.github.io/assets/Images/6.png)
 
 How can we prevent this as an Incident Responder? This is done by limiting the number of devices that can access the Domain or limiting the number of attempts to avoid Brute Force.
 
@@ -205,6 +205,6 @@ How do we as Incident Responder respond to this? By analyzing the packet with to
 
 However, the hacker can make a tricky move and evade this code by doing Encoding of this script. 
 
-![image.png](attachment:2ee032a4-8878-42bc-a65c-aea96e70c66d:image.png)
+![alt text](/aliiabdelsalam.github.io/assets/Images/7.png)
 
 Here is a link to the **malicious**  JavaScript code **that modifies cry** ptocurrencieshttps://www.fortinet.com/blog/threat-research/the-growing-trend-of-coin-miner-javascript-infection
