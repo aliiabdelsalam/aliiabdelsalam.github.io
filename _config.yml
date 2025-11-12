@@ -26,10 +26,10 @@ description: >- # used by seo meta and the atom feed
 url: "https://aliiabdelsalam.github.io"
 
 github:
-  username: github_aliiabdelsalam # change to your GitHub username
+  username: aliiabdelsalam # change to your GitHub username
 
 twitter:
-  username: twitter_aliiabdelsalam # change to your Twitter username
+  username: Ali_Ahmed306 # change to your Twitter username
 
 social:
   # Change to your full name.
@@ -42,7 +42,7 @@ social:
     - https://github.com/aliiabdelsalam # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/ali-abdalsalam306
 
 # Site Verification Settings
 webmaster_verifications:
