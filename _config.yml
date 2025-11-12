@@ -14,9 +14,9 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Ali Abd El-Salam # the main title
+title: 0xRicin # the main title
 
-tagline:  # it will display as the subtitle
+tagline: Blue Team Tips # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   blog to uplode my document
@@ -38,7 +38,7 @@ social:
   email: aliabdalsalam1000@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/aliiabdelsalam # change to your Twitter homepage
+    - https://x.com/Ali_Ahmed306 # change to your Twitter homepage
     - https://github.com/aliiabdelsalam # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
@@ -98,8 +98,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://scontent.fcai21-2.fna.fbcdn.net/v/t39.30808-1/493695728_598710359852387_1367959985959117695_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=106&ccb=1-7&_nc_sid=e99d92&_nc_ohc=tHH4-xyDM5EQ7kNvwGkvO6N&_nc_oc=Adks0Dn2ZASUFKYgfE3uc7OLB2aS2N7h5gZSFyCtVvTV_BKCZ8n6CCcH1vi4-ZIJsYc&_nc_zt=24&_nc_ht=scontent.fcai21-2.fna&_nc_gid=o9_yDUoyLvhmT5Se0HbBkA&oh=00_AffFb0AjD3gGypz95rb9UQWZpGozm_C9zuE-zcs_1VOQ1Q&oe=690288AC
-# The URL of the site-wide social preview image used in SEO `og:image` meta tag.
+avatar: https://pbs.twimg.com/profile_images/1982042234611433472/GpQG6OZZ_400x400.jpg
 # It can be overridden by a customized `page.image` in front matter.
 social_preview_image: # string, local or CORS resources
 
