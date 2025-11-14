@@ -30,7 +30,7 @@ As you can see, there's a lot of great information on this site.
 
 There is also a tool on Kali Linux called `Whois` that you can use as a Command Line 
 
-![using this tool](https://github.com/aliiabdelsalam/aliiabdelsalam.github.io/blob/main/assets/Images/2.png)
+<img src="../assets/Images/2.png" alt="Image2">
 As you can see, we can gather information using this tool. 
 
 ---
@@ -77,8 +77,8 @@ These names can give us an idea of the company's internal structure.
 
 This topic is very useful in the **reconnaissance** or information gathering phase during a penetration test, and we can use sites like https://crt.sh/ or https://search.censys.io/to easily find these domains.
 
-![using this tool](https://github.com/aliiabdelsalam/aliiabdelsalam.github.io/blob/main/assets/Images/3.png)
-![using this tool](https://github.com/aliiabdelsalam/aliiabdelsalam.github.io/blob/main/assets/Images/4.png)
+<img src="../assets/Images/3.png" alt="img3">
+<img src="../assets/Images/3.png" alt="img4">
 It is also useful in the Web Application Penetration Testing (WAPT) process by leaving a subdomain, for example, unprotected and so on because subdomains can be less secure 
 
 Of course, as an incident Responder, I do exactly what a hacker would do and make sure that no important information is leaked or that there is no Internal Server that a hacker can get access to before the hacker eats you.
@@ -135,7 +135,7 @@ It works with tools like `nslookup or` `dig`
 
 This is an example of using the `dig` tool.
 
-![using this tool](https://github.com/aliiabdelsalam/aliiabdelsalam.github.io/blob/main/assets/Images/5.png)
+<img src="../assets/Images/5.png" alt="img5">
 How do we prevent this? By preventing you from getting a Zone Transfer in the first place, which is done by the Adminstrator 
 
 ---
@@ -181,7 +181,7 @@ Invoke-DomainHarvestOWA–ExchHostname mail.domain.com –OutFile potential_doma
 
 ```
 
-![using this tool](https://github.com/aliiabdelsalam/aliiabdelsalam.github.io/blob/main/assets/Images/6.png)
+<img src="../assets/Images/6.png" alt="img6">
 How can we prevent this as an Incident Responder? This is done by limiting the number of devices that can access the Domain or limiting the number of attempts to avoid Brute Force.
 
 ---
@@ -198,5 +198,5 @@ How do we as Incident Responder respond to this? By analyzing the packet with to
 
 However, the hacker can make a tricky move and evade this code by doing Encoding of this script. 
 
-![using this tool](https://github.com/aliiabdelsalam/aliiabdelsalam.github.io/blob/main/assets/Images/7.png)
+<img src="../assets/Images/7.png" alt="img7">
 Here is a link to the **malicious**  JavaScript code **that modifies cry** ptocurrencieshttps://www.fortinet.com/blog/threat-research/the-growing-trend-of-coin-miner-javascript-infection
