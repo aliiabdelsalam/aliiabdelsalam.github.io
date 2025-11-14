@@ -25,7 +25,7 @@ What does this do or how does it happen? Basically, any website that is created 
 For example, a site like this one we use to collect information about Target https://who.is/ 
 
 Here's another, better site: https://whois.domaintools.com/
-<img src="/../assets/Images/1.png" alt="Preparation Image">
+<img src="../assets/Images/1.png" alt="Preparation Image">
 As you can see, there's a lot of great information on this site. 
 
 There is also a tool on Kali Linux called `Whois` that you can use as a Command Line 
