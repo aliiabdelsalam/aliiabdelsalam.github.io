@@ -2,7 +2,7 @@
 title: Enumeration Using Net Tool
 date: 2025-11-26
 category: Active Directory
-img_path: ../assest/images/Active Directory/net tool
+img_path: ../assest/images/Active-Directory/net-tool
 ---
 In this series, we will start talking about Active Director  and the most common Attack  carried out against it. The advantage is that we will explain how to perform the Attack in a practical wa  and also how to Detec  it as an Incident Responde .
 
@@ -33,7 +33,7 @@ net user /domain
 
 This displays all User  in the Active Directory.
 
-<img src="{{ '/assets/Images/Active Directory/net tool/1.png' | relative_url }}" alt="1">
+<img src="{{ '/assets/Images/Active-Directory/net-tool/1.png' | relative_url }}" alt="1">
 ---
 
 ### <span style="font-size:20px; font-weight:bold">2) View Full Info About a Specific User </span> 
@@ -56,7 +56,7 @@ Example:
 net user administrator /domain
 ```
 
-<img src="{{ '/assets/Images/Active Directory/net tool/2.png' | relative_url }}" alt="2">
+<img src="{{ '/assets/Images/Active-Directory/net-tool/2.png' | relative_url }}" alt="2">
 
 ---
 
@@ -69,7 +69,7 @@ net group /domain
 
 This displays all groups at the domain level.
 
-<img src="{{ '/assets/Images/Active Directory/net tool/3.png' | relative_url }}" alt="3">
+<img src="{{ '/assets/Images/Active-Directory/net-tool/3.png' | relative_url }}" alt="3">
 
 ---
 
@@ -89,7 +89,7 @@ net group "Enterprise Admins" /domain
 net group "Administrators" /domain
 ```
 
-<img src="{{ '/assets/Images/Active Directory/net tool/4.png' | relative_url }}" alt="4">
+<img src="{{ '/assets/Images/Active-Directory/net-tool/4.png' | relative_url }}" alt="4">
 
 ---
 
@@ -100,7 +100,7 @@ net group "Administrators" /domain
 net localgroup
 ```
 
-<img src="{{ '/assets/Images/Active Directory/net tool/5.png' | relative_url }}" alt="5">
+<img src="{{ '/assets/Images/Active-Directory/net-tool/5.png' | relative_url }}" alt="5">
 
 ---
 
@@ -113,7 +113,7 @@ net localgroup administrators
 
 This displays who has Admin Acces  on the local machine  very important for Lateral Movement.
 
-<img src="{{ '/assets/Images/Active Directory/net tool/6.png' | relative_url }}" alt="6">
+<img src="{{ '/assets/Images/Active-Directory/net-tool/6.png' | relative_url }}" alt="6">
 
 ---
 
@@ -125,7 +125,7 @@ net group "Domain Controllers" /domain
 
 The Domain Controller name here is D .
 
-<img src="{{ '/assets/Images/Active Directory/net tool/7.png' | relative_url }}" alt="7">
+<img src="{{ '/assets/Images/Active-Directory/net-tool/7.png' | relative_url }}" alt="7">
 
 ---
 
@@ -152,7 +152,7 @@ net share
 
 The first step to discover shared folder  + writable share .
 
-<img src="{{ '/assets/Images/Active Directory/net tool/8.png' | relative_url }}" alt="8">
+<img src="{{ '/assets/Images/Active-Directory/net-tool/8.png' | relative_url }}" alt="8">
 
 ---
 
@@ -205,7 +205,7 @@ What appears in Wireshark is:
 
 This is what we use to understand which Command is running.
 
-<img src="{{ '/assets/Images/Active Directory/net tool/9.png' | relative_url }}" alt="9">
+<img src="{{ '/assets/Images/Active-Directory/net-tool/9.png' | relative_url }}" alt="9">
 
 What is shown in the image:
 
@@ -243,7 +243,7 @@ SMB primarily uses TCP port 44  for communication over TCP/IP networks. Older, i
 - After a successful Session Setup, the server returns a SESSION I , and you can perform a Tree Connec  to a Share File or IPC .
  In Wireshar : After the Negotiate Protocol Request/Response, you will find a `Session Setup Request` and `Response`. If successful, you will see `STATUS_SUCCESS` and often information about the user or a token.
 
-<img src="{{ '/assets/Images/Active Directory/net tool/10.png' | relative_url }}" alt="10">
+<img src="{{ '/assets/Images/Active-Directory/net-tool/10.png' | relative_url }}" alt="10">
 
 ---
 
@@ -282,7 +282,7 @@ And it is executed inside SMB on a Pipe called:
 \\IPC$
 ```
 
-<img src="{{ '/assets/Images/Active Directory/net tool/11.png' | relative_url }}" alt="11">
+<img src="{{ '/assets/Images/Active-Directory/net-tool/11.png' | relative_url }}" alt="11">
 
 ---
 
@@ -324,7 +324,7 @@ SamrEnumerateAliasesInDomain
 
 When you see SAM  → you know immediately that User/Group Enumeratio  is occurring.
 
-<img src="{{ '/assets/Images/Active Directory/net tool/12.png' | relative_url }}" alt="12">
+<img src="{{ '/assets/Images/Active-Directory/net-tool/12.png' | relative_url }}" alt="12">
 
 
 As shown in the image, an Enumeration occurred on the Domain, and the hacker was able to obtain Users and Groups, just as we did above.
@@ -352,7 +352,7 @@ LsarLookupSids
 LsarQueryInformationPolicy
 ```
 
-<img src="{{ '/assets/Images/Active Directory/net tool/13.png' | relative_url }}" alt="13">
+<img src="{{ '/assets/Images/Active-Directory/net-tool/13.png' | relative_url }}" alt="13">
 
 ---
 
