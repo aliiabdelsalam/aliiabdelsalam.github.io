@@ -6,7 +6,7 @@ img_path: ../assest/images/Active Directory/net tool
 ---
 In this series, we will start talking about Active Director  and the most common Attack  carried out against it. The advantage is that we will explain how to perform the Attack in a practical wa  and also how to Detec  it as an Incident Responde .
 
-Initially, we will begin with the most critical part an Attacker performs: the Enumeratio  process.
+Initially, we will begin with the most critical part an Attacker performs: the Enumeration  process.
 
 For those who don't know what Enumeration is, we will quickly explain it: It's an essential Attack Phas  that the attacker must carry out because it helps them gather more information about their targe , such as the Services that might be available and their versions, as well as if there are any open Sessions or sessions that can be opened, like a Null Sessio  (which we will explain later). Overall, it's a very beneficial process for the Attacker.
 
@@ -16,30 +16,30 @@ These are some of the Tools we use in enumeration. We won't cover them all, but 
 
 ---
 
-## Net Tool
+<h1><span style="color:Darkorange; font-weight:bold"> Net Tool</span></h1>
 
-### Offensive Part
+## <span style="color:red; font-weight:bold"> Offensive Part </span>
 
-Let's start with our first Tool: `Net.exe .
+Let's start with our first Tool: <span style="font-Weight:bold">Net.exe</span> .
 
-The `net.exe  utility is a built-in Windows tool used for managing accounts, groups, services, networks, sessions, etc. It is considered a fast way to collect information  Enumeratio ) specific to the domain without needing high privileges or external tools.
- Most Important Enumeration Commands using `net 
+The net.exe  utility is a built-in Windows tool used for managing accounts, groups, services, networks, sessions, etc. It is considered a fast way to collect information  Enumeratio specific to the domain without needing high privileges or external tools.
+ Most Important Enumeration Commands using net 
 
-1. Enumerate Domain User 
+### <span style="font-size:20px; font-weight:bold">1) Enumerate Domain User </span> 
 
-```jsx
+```powershell
 net user /domain
 ```
 
 This displays all User  in the Active Directory.
 
-![image.png](attachment:312e4197-90fd-4ebe-9931-f69f542304ec:image.png)
-
+<img src="{{ '/assets/Images/Active Directory/net tool/1.png' | relative_url }}" alt="1">
 ---
 
-1. View Full Info About a Specific Use 
+### <span style="font-size:20px; font-weight:bold">2) View Full Info About a Specific User </span> 
 
-```jsx
+
+```powershell
 net user username /domain
 ```
 
@@ -52,29 +52,31 @@ This displays:
 
 Example:
 
-```jsx
+```powershell
 net user administrator /domain
 ```
 
-![image.png](attachment:9aeef89b-a438-400c-9bb4-6089f0590364:image.png)
+<img src="{{ '/assets/Images/Active Directory/net tool/2.png' | relative_url }}" alt="2">
 
 ---
 
-1.  Enumerate Domain Group 
+### <span style="font-size:20px; font-weight:bold">3) Enumerate Domain Group </span> 
 
-```jsx
+
+```powershell
 net group /domain
 ```
 
 This displays all groups at the domain level.
 
-![image.png](attachment:3952ff74-2e55-4bd1-8b20-04e3251c730e:image.png)
+<img src="{{ '/assets/Images/Active Directory/net tool/3.png' | relative_url }}" alt="3">
 
 ---
 
-1. List Members of a Grou 
 
-```jsx
+### <span style="font-size:20px; font-weight:bold">4) List Members of a Group </span> 
+
+```powershell
 net group "Domain Admins" /domain
 ```
 
@@ -82,52 +84,55 @@ This outputs who is inside that group.
 
 Important examples:
 
-```jsx
+```powershell
 net group "Enterprise Admins" /domain
 net group "Administrators" /domain
 ```
 
-![image.png](attachment:5e82be6b-d9cf-49c1-a5b8-805fdaa6cad5:image.png)
+<img src="{{ '/assets/Images/Active Directory/net tool/4.png' | relative_url }}" alt="4">
 
 ---
 
-1. Enumerate Local Groups on a Machin 
 
-```jsx
+### <span style="font-size:20px; font-weight:bold">5) Enumerate Local Groups on a Machine </span> 
+
+```powershell
 net localgroup
 ```
 
-![image.png](attachment:5ff33104-18b3-447d-ae9d-08222e15f44d:image.png)
+<img src="{{ '/assets/Images/Active Directory/net tool/5.png' | relative_url }}" alt="5">
 
 ---
 
-1. Members of a Local Grou 
 
-```jsx
+### <span style="font-size:20px; font-weight:bold">6) Members of a Local Group</span> 
+
+```powershell
 net localgroup administrators
 ```
 
-This displays who has Admin Acces  on the local machine  very important for Lateral Movemen ).
+This displays who has Admin Acces  on the local machine  very important for Lateral Movement.
 
-![image.png](attachment:0567a359-0bcc-4082-8f5c-0977f417293e:image.png)
+<img src="{{ '/assets/Images/Active Directory/net tool/6.png' | relative_url }}" alt="6">
 
 ---
 
-1. Show Domain Controller 
+### <span style="font-size:20px; font-weight:bold">7) Show Domain Controller</span> 
 
-```jsx
+```powershell
 net group "Domain Controllers" /domain
 ```
 
 The Domain Controller name here is D .
 
-![image.png](attachment:803e590f-518d-45d5-8608-49f801fd1483:image.png)
+<img src="{{ '/assets/Images/Active Directory/net tool/7.png' | relative_url }}" alt="7">
 
 ---
 
-1. Find Logged-in Users on a Hos 
 
-```jsx
+### <span style="font-size:20px; font-weight:bold">8) Find Logged-in Users on a Host</span> 
+
+```powershell
 net session
 ```
 
@@ -138,35 +143,38 @@ If you have privileges:
 
 ---
 
-1. Enumerate Network Share 
+ 
+### <span style="font-size:20px; font-weight:bold">9) Enumerate Network Share</span> 
 
-```jsx
+```powershell
 net share
 ```
 
 The first step to discover shared folder  + writable share .
 
-![image.png](attachment:e35677de-c1b3-469d-8790-198ce3d1ec78:image.png)
+<img src="{{ '/assets/Images/Active Directory/net tool/8.png' | relative_url }}" alt="8">
 
 ---
 
-1. Show Computers in the Domai 
 
-```jsx
+### <span style="font-size:20px; font-weight:bold">10) Show Computers in the Domain</span> 
+
+```powershell
 net view /domain
 ```
 
 And if you want to see machines in a specific domain:
 
-```jsx
+```powershell
 net view /domain:DOMAINNAME
 ```
 
 ---
 
-1. View Shares on a Specific Machin 
 
-```jsx
+### <span style="font-size:20px; font-weight:bold">11) View Shares on a Specific Machine</span> 
+
+```powershell
 net view \\TARGET
 ```
 
@@ -180,7 +188,7 @@ Now, how can we perform Detectio  for anyone using a tool like Ne  to perform En
 
 ---
 
-## Detection Part
+## <span style="color:blue; font-weight:bold">Detection Part</span>
 
 How can we identify that the `net` comman  is running in our environment? Firstly, all `net` commands operate using SMB + RPC over SM .
 
@@ -189,15 +197,15 @@ What appears in Wireshark is:
 - Session Setu 
 - Tree Connect to `IPC$ 
 - RPC Call  such as:
-    - `SamrEnumerateDomainsInSamServer 
-    - `SamrLookupDomain 
-    - `SamrEnumerateUsersInDomain 
-    - `SamrQueryInformationGroup 
-    - `NetShareEnum 
+    - `SamrEnumerateDomainsInSamServer`
+    - `SamrLookupDomain` 
+    - `SamrEnumerateUsersInDomain` 
+    - `SamrQueryInformationGroup` 
+    - `NetShareEnum` 
 
 This is what we use to understand which Command is running.
 
-![image.png](attachment:f3c69c77-2093-4588-958a-457b6ed4aa7d:image.png)
+<img src="{{ '/assets/Images/Active Directory/net tool/9.png' | relative_url }}" alt="9">
 
 What is shown in the image:
 
@@ -214,7 +222,7 @@ Now, we have a few things in the image that we will assume we don't know what th
 
 ### What is SMB?
 
-The Server Message Block (SMB  protocol is a client-server network protocol that enables applications to access and share resources, such as files, printers, and serial ports, across a network. Originally developed by IBM, SMB has evolved significantly and is integral to networking in Microsoft Windows, as well as on Linux and macOS via implementations like Samba.
+The Server Message Block SMB  protocol is a client-server network protocol that enables applications to access and share resources, such as files, printers, and serial ports, across a network. Originally developed by IBM, SMB has evolved significantly and is integral to networking in Microsoft Windows, as well as on Linux and macOS via implementations like Samba.
  How SMB work 
 
 SMB uses a request-response model where a client sends a request to a server to access a shared resource. The communication process follows these steps:
@@ -229,13 +237,13 @@ SMB primarily uses TCP port 44  for communication over TCP/IP networks. Older, i
 ---
 
 ### What is SMB Session Setup?
- Session Setu  is the step where the client asks the server to create a "user session," and it usually includes Authenticatio .
+ Session Setup is the step where the client asks the server to create a "user session," and it usually includes Authenticatio .
 
-- During this, the client sends authentication data: this could be NTL  or Kerbero  (in a domain).
+- During this, the client sends authentication data: this could be NTLM  or Kerberos  (in a domain).
 - After a successful Session Setup, the server returns a SESSION I , and you can perform a Tree Connec  to a Share File or IPC .
  In Wireshar : After the Negotiate Protocol Request/Response, you will find a `Session Setup Request` and `Response`. If successful, you will see `STATUS_SUCCESS` and often information about the user or a token.
 
-![image.png](attachment:b38f5fb0-73be-4b5d-8937-ec20d392b710:image.png)
+<img src="{{ '/assets/Images/Active Directory/net tool/10.png' | relative_url }}" alt="10">
 
 ---
 
@@ -246,7 +254,7 @@ These are newer versions of SMB and are better than SMBv1 in terms of security a
 ---
 
 ### DCERPC
- DCE/RPC (Distributed Computing Environment / Remote Procedure Call  is a protocol for remote procedure calls that allows a client to execute a procedure on a remote server as if it were a local call, hiding the complexity of the network communication. Developed by the Open Software Foundation, it is a core component of many systems, especially in Microsoft Windows environments where it is known as MS-RPC and is used for services like Active Directory. The protocol uses a Universal Unique Identifier (UUID) to identify services and relies on a client-server model where the client is blocked until the server responds.
+ DCE/RPC (Distributed Computing Environment / Remote Procedure Call)  is a protocol for remote procedure calls that allows a client to execute a procedure on a remote server as if it were a local call, hiding the complexity of the network communication. Developed by the Open Software Foundation, it is a core component of many systems, especially in Microsoft Windows environments where it is known as MS-RPC and is used for services like Active Directory. The protocol uses a Universal Unique Identifier (UUID) to identify services and relies on a client-server model where the client is blocked until the server responds.
  How it work 
 
 - Client-side  A client application calls a remote procedure. The DCE/RPC library on the client machine encodes the call and its arguments into network packets and sends them to the server.
@@ -270,11 +278,11 @@ These commands are executed via DCERP .
 
 And it is executed inside SMB on a Pipe called:
 
-```jsx
+```powershell
 \\IPC$
 ```
 
-![image.png](attachment:880c1c56-f576-420d-a287-1974c997ffb5:image.png)
+<img src="{{ '/assets/Images/Active Directory/net tool/11.png' | relative_url }}" alt="11">
 
 ---
 
@@ -305,7 +313,7 @@ Its functions:
 
 In Wireshark, you will find:
 
-```jsx
+```powershell
 SamrEnumerateDomainsInSamServer
 SamrLookupDomain
 SamrOpenDomain
@@ -316,7 +324,8 @@ SamrEnumerateAliasesInDomain
 
 When you see SAM  → you know immediately that User/Group Enumeratio  is occurring.
 
-![image.png](attachment:4a4d6649-61c3-4fb8-b50e-2955e679784b:image.png)
+<img src="{{ '/assets/Images/Active Directory/net tool/12.png' | relative_url }}" alt="12">
+
 
 As shown in the image, an Enumeration occurred on the Domain, and the hacker was able to obtain Users and Groups, just as we did above.
 
@@ -337,13 +346,13 @@ Its functions:
 
 In Wireshark, you will find:
 
-```jsx
+```powershell
 LsarOpenPolicy
 LsarLookupSids
 LsarQueryInformationPolicy
 ```
 
-![image.png](attachment:793102bb-48fe-4fe9-8287-3a334dbd1bc3:image.png)
+<img src="{{ '/assets/Images/Active Directory/net tool/13.png' | relative_url }}" alt="13">
 
 ---
 
