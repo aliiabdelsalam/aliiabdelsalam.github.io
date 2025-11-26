@@ -2,7 +2,7 @@
 title: Enumeration Using Net Tool
 date: 2025-11-26
 category: Active Directory
-img_path: ../assest/images/Active-Directory/net-tool
+img_path: ../assest/Images/Active-Directory/net-tool
 ---
 In this series, we will start talking about Active Director  and the most common Attack  carried out against it. The advantage is that we will explain how to perform the Attack in a practical wa  and also how to Detec  it as an Incident Responde .
 

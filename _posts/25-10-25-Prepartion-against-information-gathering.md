@@ -2,7 +2,7 @@
 title: Prepartion against information gathering 
 date: 2025-10-25
 category: Blue Team
-img_path: ../assets/images/Prepartion-Against-information-gathering
+img_path: ../assets/Images/Prepartion-Against-information-gathering
 ---
 <h3>What is Information Gathering?</h3> It is the process of gathering information about your target using various tools or even doing a search for you online or on social media. 
 
