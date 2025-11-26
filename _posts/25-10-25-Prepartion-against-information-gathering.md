@@ -1,5 +1,5 @@
 ---
-title: Prepartion against information gathering 
+title: Preparation against information gathering 
 date: 2025-10-25
 category: Blue Team
 img_path: ../assets/Images/Preparation-Against-information-gathering
